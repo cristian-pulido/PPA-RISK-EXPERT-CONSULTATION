@@ -22,6 +22,17 @@
     .button:hover { background:var(--green-2); }
     iframe { display:block; width:100%; min-height:900px; border:0; border-radius:12px; background:#fff; }
     .hidden { display:none; }
+    @media (max-width:720px) {
+      .shell { width:100%; padding:12px 8px 28px; }
+      .hero,.info,.embed-card { padding:18px 10px; border-radius:14px; box-shadow:0 6px 18px rgba(21,61,38,.06); }
+      .hero { margin-bottom:10px; }
+      .hero p { font-size:16px; }
+      .grid { grid-template-columns:1fr; gap:10px; margin:10px 0; }
+      .info { padding:14px 12px; }
+      .embed-card h2 { font-size:21px; }
+      iframe { min-height:1100px; border-radius:8px; }
+      .button { width:100%; }
+    }
   </style>
 </head>
 <body>
