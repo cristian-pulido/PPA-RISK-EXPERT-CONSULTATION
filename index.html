@@ -41,7 +41,8 @@
     </section>
     <section id="consulta" class="embed-card">
       <h2>Formulario de consulta</h2>
-      <p id="embedNotice">La URL de Apps Script todavía no está configurada. Edite <code>app-config.js</code> antes de publicar este sitio.</p>
+      <p id="embedNotice">La aplicación web de Apps Script todavía no está configurada. Se registró la biblioteca del proyecto, pero el formulario necesita la URL de despliegue que termina en <code>/exec</code>.</p>
+      <p class="note"><a id="libraryLink" href="#" target="_blank" rel="noopener">Ver biblioteca de Apps Script</a></p>
       <iframe id="surveyFrame" title="Formulario de consulta de expertos" class="hidden" allow="clipboard-write"></iframe>
       <p class="note">Las respuestas se almacenan en la hoja operativa privada del proyecto y se usarán para construir una ponderación consensuada.</p>
     </section>
@@ -50,12 +51,16 @@
   <script>
     (function () {
       const url = window.PPA_APP_CONFIG && window.PPA_APP_CONFIG.appsScriptUrl;
+      const libraryUrl = window.PPA_APP_CONFIG && window.PPA_APP_CONFIG.appsScriptLibraryUrl;
       const frame = document.getElementById('surveyFrame');
       const notice = document.getElementById('embedNotice');
+      const libraryLink = document.getElementById('libraryLink');
+      if (libraryUrl) libraryLink.href = libraryUrl;
       if (url) {
         frame.src = url;
         frame.classList.remove('hidden');
         notice.classList.add('hidden');
+        libraryLink.parentElement.classList.add('hidden');
       }
     })();
   </script>

@@ -3,6 +3,8 @@
 El repositorio puede publicarse como sitio estático. Antes de hacerlo:
 
 - verificar que `app-config.js` contiene la URL de producción y no una URL de prueba;
+- usar como `appsScriptUrl` la URL de la aplicación web que termina en `/exec`;
+- mantener `appsScriptLibraryUrl` únicamente como referencia de la biblioteca; una URL `/macros/library/` no sirve para incrustar el formulario;
 - abrir el sitio en una ventana incógnito;
 - comprobar que el iframe carga el formulario;
 - validar que la web app está desplegada como usuario propietario y con el acceso requerido;
