@@ -13,8 +13,14 @@
     h1 { max-width:780px; margin:8px 0 16px; font-size:clamp(32px,5vw,58px); line-height:1.05; }
     h2 { margin-top:0; font-size:24px; }
     .hero,.info,.embed-card { padding:30px; border:1px solid var(--line); border-radius:18px; background:var(--card); box-shadow:0 12px 34px rgba(21,61,38,.08); }
-    .hero { margin-bottom:18px; }
-    .hero p { max-width:760px; color:var(--muted); font-size:18px; }
+    .hero { position:relative; margin-bottom:18px; }
+    .hero-top { display:block; }
+    .brand-logo { position:absolute; top:30px; right:30px; display:block; width:min(500px,48%); height:auto; object-fit:contain; }
+    h1 { max-width:none; }
+    .hero h1 { margin-top:38px; }
+    .title-line { display:block; white-space:nowrap; }
+    .hero p { max-width:none; color:var(--muted); font-size:18px; text-align:justify; }
+    .before-start h2 { margin:0 0 12px; }
     .grid { display:grid; gap:18px; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); margin:18px 0; }
     .info { padding:22px; }
     .info strong { display:block; color:var(--green); margin-bottom:5px; }
@@ -26,6 +32,9 @@
       .shell { width:100%; padding:12px 8px 28px; }
       .hero,.info,.embed-card { padding:18px 10px; border-radius:14px; box-shadow:0 6px 18px rgba(21,61,38,.06); }
       .hero { margin-bottom:10px; }
+      .brand-logo { position:static; width:min(390px,100%); margin:10px 0 0 auto; }
+      .hero h1 { margin-top:8px; }
+      .title-line { white-space:normal; }
       .hero p { font-size:16px; }
       .grid { grid-template-columns:1fr; gap:10px; margin:10px 0; }
       .info { padding:14px 12px; }
@@ -38,15 +47,15 @@
 <body>
   <main class="shell">
     <section class="hero">
-      <div class="eyebrow">Consulta técnica · DATALAB</div>
-      <h1>Ponderación del modelo de riesgo de Peste Porcina Africana</h1>
-      <p>Este espacio recoge la opinión de expertos para ordenar y asignar pesos a los componentes, categorías, factores y subfactores del modelo jerárquico de riesgo sanitario.</p>
+      <div class="hero-top">
+        <div class="eyebrow">Consulta técnica</div>
+        <img class="brand-logo" src="assets/Logo.png" alt="Porkcolombia y Laboratorio de Analítica de Datos de la Universidad Nacional de Colombia">
+      </div>
+      <h1><span class="title-line">Jerarquización y Ponderación</span><span class="title-line">Índice de Riesgo Sanitario</span><span class="title-line">Peste Porcina Africana (PPA)</span></h1>
+      <p>Estimado experto: Agradecemos su participación. Este espacio virtual tiene como objetivo recoger su opinión para ordenar (jerarquización) y ponderar (asignar pesos) tanto CATEGORÍAS como FACTORES DE RIESGO, asociados con los COMPONENTES de Amenaza y Vulnerabilidad para la construcción del Índice de Riesgo Sanitario por Peste Porcina Africana (PPA) en el territorio nacional.</p>
+      <p>Al ser considerado como experto, este ejercicio virtual pretende establecer el grado de preferencia (entendido como la ventaja o primacía de una Categoría sobre otra, o de un Factor de Riesgo sobre otro) que usted tiene a través de pesos entre 0 y 100, donde el resultado de la suma de cada agrupación deberá ser igual a 100.</p>
+      <p>El equipo de Porkcolombia-FNP y el DataLab-UNAL (Universidad Nacional de Colombia), que está realizando este estudio para PPA, quiere agradecer su tiempo y disposición, recordándole que su participación será de gran utilidad para la sanidad del país y la industria porcina colombiana.</p>
       <a id="openButton" class="button" href="#consulta">Abrir consulta</a>
-    </section>
-    <section class="grid" aria-label="Información del proceso">
-      <article class="info"><strong>¿Qué hará?</strong> Revisará cada agrupación fija y asignará una posición y un peso a sus elementos.</article>
-      <article class="info"><strong>Regla de pesos</strong> Los pesos de cada agrupación deben estar entre 0 y 1 y sumar 1.</article>
-      <article class="info"><strong>Continuidad</strong> Puede guardar avances y continuar usando el mismo correo electrónico.</article>
     </section>
     <section id="consulta" class="embed-card">
       <h2>Formulario de consulta</h2>
